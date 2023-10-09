@@ -1,0 +1,241 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "6dfac80d-1d49-4326-8fe2-e64eb4980920",
+   "metadata": {},
+   "source": [
+    "Chapter 7"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b137c131-8246-4283-98ea-7651a6ddd875",
+   "metadata": {},
+   "source": [
+    "# Algorithm Workbench 1,5"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "783c3cfc-8f15-4685-b60e-7c6e764ca187",
+   "metadata": {},
+   "source": [
+    "## 1. write a statement that creates a list with the following strings: 'einstein', 'newton', 'copernicus', and 'kepler'"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "d68d6aac-189b-4940-814c-7bdd1e6a162b",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "names = ['einstein', 'newton', 'copernicus', 'kepler']\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "0d4da496-a082-43d3-9ca3-785305b157c0",
+   "metadata": {},
+   "source": [
+    "## 5. write a function that accepts a list as an argument (assume the list contains integers) and returns the total of the values in the list"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "id": "b76e80e5-d289-4219-b6ad-e10ad3131f10",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def calculate_total(numbers):\n",
+    "    total = 0  # Initialize a variable to store the total sum\n",
+    "\n",
+    "    for number in numbers:\n",
+    "        total + number  # add each number in the list to the total\n",
+    "    \n",
+    "    return total  # return the final total sum"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "id": "a75a5055-6003-423b-8274-f8f7d5999c7b",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "15\n"
+     ]
+    }
+   ],
+   "source": [
+    "def calculate_total(numbers):\n",
+    "    total = 0  # Initialize a variable to store the total sum\n",
+    "\n",
+    "    for number in numbers:\n",
+    "        total += number  # add each number in the list to the total\n",
+    "    \n",
+    "    return total  # return the final total sum\n",
+    "\n",
+    "my_list = [1, 2, 3, 4, 5]\n",
+    "result = calculate_total(my_list)\n",
+    "print(result)  \n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 20,
+   "id": "3bdc7c7e-a94d-4c24-a41d-1b571dcfbd45",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "81\n"
+     ]
+    }
+   ],
+   "source": [
+    "def calculate_total(numbers):\n",
+    "    total = 0  # Initialize a variable to store the total sum\n",
+    "\n",
+    "    for number in numbers:\n",
+    "        total += number  # add each number in the list to the total\n",
+    "    \n",
+    "    return total  # return the final total sum\n",
+    "\n",
+    "my_list = [11, 21, 3, 41, 5]\n",
+    "result = calculate_total(my_list)\n",
+    "print(result)  \n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b4e637a2-88d2-4def-8abf-44fe3ee22737",
+   "metadata": {},
+   "source": [
+    "# Programming Exercises 1,2,6,14"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "6c58de76-30a3-4232-86b6-ef00c1c149f8",
+   "metadata": {},
+   "source": [
+    "## 1. design a program that asks the user to enter a stores sales for each day of the week. the amounts should be stored in a list. use a loop to calculate the total sales for the week and display the result"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 26,
+   "id": "45df5259-8f8b-4482-b418-835ad4a8250c",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "SyntaxError",
+     "evalue": "unterminated string literal (detected at line 5) (2856929931.py, line 5)",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;36m  Cell \u001b[0;32mIn[26], line 5\u001b[0;36m\u001b[0m\n\u001b[0;31m    days_of_week = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', sunday']\u001b[0m\n\u001b[0m                                                                                              ^\u001b[0m\n\u001b[0;31mSyntaxError\u001b[0m\u001b[0;31m:\u001b[0m unterminated string literal (detected at line 5)\n"
+     ]
+    }
+   ],
+   "source": [
+    "# a empty list to store daily sales\n",
+    "daily_sales = []\n",
+    "\n",
+    "# define a list of days of the week\n",
+    "days_of_week = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', sunday']\n",
+    "\n",
+    "# use loop to get sales for each day\n",
+    "for day in days_of_week:\n",
+    "    # ask user for sales input for the current day\n",
+    "    sales = float(input(f'Enter sales for {day}: $'))\n",
+    "    \n",
+    "    daily_sales.append(sales)\n",
+    "\n",
+    "# total sales for the week using a loop\n",
+    "total_sales = 0\n",
+    "for sales in daily_sales:\n",
+    "    total_sales += sales\n",
+    "\n",
+    "# total sales for the week\n",
+    "print(f'Total sales for the week: ${total_sales:.2f}')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 26,
+   "id": "33e6f571-1ba6-480f-a287-a5030a400b6c",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "SyntaxError",
+     "evalue": "unterminated string literal (detected at line 5) (2856929931.py, line 5)",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;36m  Cell \u001b[0;32mIn[26], line 5\u001b[0;36m\u001b[0m\n\u001b[0;31m    days_of_week = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', sunday']\u001b[0m\n\u001b[0m                                                                                              ^\u001b[0m\n\u001b[0;31mSyntaxError\u001b[0m\u001b[0;31m:\u001b[0m unterminated string literal (detected at line 5)\n"
+     ]
+    }
+   ],
+   "source": [
+    "# a empty list to store daily sales\n",
+    "daily_sales = []\n",
+    "\n",
+    "# define a list of days of the week\n",
+    "days_of_week = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', sunday']\n",
+    "\n",
+    "# use loop to get sales for each day\n",
+    "for day in days_of_week:\n",
+    "    # ask user for sales input for the current day\n",
+    "    sales = float(input(f'Enter sales for {day}: $'))\n",
+    "    \n",
+    "    daily_sales.append(sales)\n",
+    "\n",
+    "# total sales for the week using a loop\n",
+    "total_sales = 0\n",
+    "for sales in daily_sales:\n",
+    "    total_sales += sales\n",
+    "\n",
+    "# total sales for the week\n",
+    "print(f'Total sales for the week: ${total_sales:.2f}')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "eaa2d960-1c00-43dc-84f0-2e83c30f1796",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "anaconda-panel-2023.05-py310",
+   "language": "python",
+   "name": "conda-env-anaconda-panel-2023.05-py310-py"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.11.4"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
